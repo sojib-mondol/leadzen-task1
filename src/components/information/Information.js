@@ -33,8 +33,8 @@ const Information = () => {
     };
 
     return (
-        <>
-        <div className='bg-blue-100  p-5 rounded'>
+        <div className='bg-blue-50  p-5 rounded '>
+        <div >
             {
                 currentItems.map(info => <TableInfo
                     key={info.id}
@@ -52,8 +52,13 @@ const Information = () => {
                 pageCount={pageCount}
                 previousLabel="< "
                 renderOnZeroPageCount={null}
+                containerClassName="pagination"
+                pageLinkClassName="page-num"
+                previousLinkClassName="page-num"
+                nextLinkClassName="page-num"
+                activeLinkClassName="active"
             />
-        </>
+        </div>
     );
 };
 

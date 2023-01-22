@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import ReactPaginate from 'react-paginate';
+import React from 'react';
 
 const TableInfo = ({info}) => {
     const {name, contact, city, state, details, id} = info;
