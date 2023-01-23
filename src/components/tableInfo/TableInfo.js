@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthProvider';
 
 const TableInfo = ({info} ) => {
-    const {name, contact, city, state, details, id} = info;
+    const {name, username, address, id} = info;
 
     const {setId, id:ID} = useContext(AuthContext);
     // console.log("ID", ID);
@@ -17,15 +17,15 @@ const TableInfo = ({info} ) => {
                 </div>
                 <div>
                     <h2>CONTACT</h2>
-                    <h3>{contact}</h3>
+                    <h3>{username}</h3>
                 </div>
                 <div>
                     <h2>CITY</h2>
-                    <h3>{city}</h3>
+                    <h3>{address?.city}</h3>
                 </div>
                 <div>
                     <h2>STATE</h2>
-                    <h3>{state}</h3>
+                    <h3>{address?.city}</h3>
                 </div>
                 <div className=''>
                     {/* onClick={() => addDetails(id)} */}

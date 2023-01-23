@@ -8,7 +8,7 @@ const Information = () => {
 
     // fatching the fake data from a public json file
     useEffect(() => {
-        fetch('fakeData.json')
+        fetch('https://jsonplaceholder.typicode.com/users')
         .then(res => res.json())
         .then(data =>  setInformations(data))
    },[])
