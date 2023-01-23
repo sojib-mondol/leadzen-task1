@@ -1,6 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const TableInfo = ({info}) => {
+const TableInfo = ({info, addDetails} ) => {
     const {name, contact, city, state, details, id} = info;
 
 
@@ -24,7 +25,7 @@ const TableInfo = ({info}) => {
                     <h3>{state}</h3>
                 </div>
                 <div className=''>
-                    <button className="btn btn-error rounded-full ">View Details</button>
+                    <button onClick={() => addDetails(id)} className="btn btn-error rounded-full ">View Details</button>
                 </div>
             </div>
             
