@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../context/AuthProvider';
 
-const TableInfo = ({info, addDetails} ) => {
+const TableInfo = ({info} ) => {
     const {name, contact, city, state, details, id} = info;
 
+    const {setId, id:ID} = useContext(AuthContext);
+    // console.log("ID", ID);
 
     return (
         <>
@@ -25,7 +28,8 @@ const TableInfo = ({info, addDetails} ) => {
                     <h3>{state}</h3>
                 </div>
                 <div className=''>
-                    <button onClick={() => addDetails(id)} className="btn btn-error rounded-full ">View Details</button>
+                    {/* onClick={() => addDetails(id)} */}
+                    <Link to={`/detals`} > <button onClick={() => setId(id)} className="btn btn-error rounded-full ">View Details</button> </Link>
                 </div>
             </div>
             

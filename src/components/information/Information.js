@@ -32,9 +32,7 @@ const Information = () => {
         setItemOffset(newOffset);
     };
     
-    const addDetails = (id) => {
-        console.log("IDDDDDDDDDDD", id);
-    }
+    
 
     return (
         <div className='bg-blue-50  p-5 rounded '>
@@ -43,7 +41,7 @@ const Information = () => {
                 currentItems.map(info => <TableInfo
                     key={info.id}
                     info={info}
-                    addDetails={addDetails}
+                   
                 ></TableInfo>)
             }
         </div>
